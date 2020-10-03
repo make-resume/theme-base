@@ -1,0 +1,25 @@
+{
+	"name": "make-resume-base",
+	"version": "1.0.0",
+	"description": "Make Resume built-in and default theme.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Inambe/make-resume-base.git"
+	},
+	"keywords": [
+		"resume",
+		"cv",
+		"make-resume",
+		"resume-builder"
+	],
+	"author": "Inam Ul Huq",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Inambe/make-resume-base/issues"
+	},
+	"homepage": "https://github.com/Inambe/make-resume-base#readme"
+}
