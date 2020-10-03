@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{resume.basics.name}} - {{resume.basics.label}}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+		/>
+		<link rel="stylesheet" href="./assets/index.css" />
+	</head>
+	<body>
+		{{#with resume.basics}}
+		<header class="hero is-info mb-6">
+			<div class="hero-body">
+				<div class="c-container">
+					<h1 class="title is-1">{{name}}</h1>
+					<h3 class="subtitle is-italic">{{label}}</h3>
+				</div>
+			</div>
+		</header>
+		{{/with}}
+
+		<div class="c-container content">
+			{{#with resume.basics}}
+			{{> contact}}
+			{{> summary}}
+			{{/with}}
+
+			{{#with resume}}
+			{{> work }}
+			{{> volunteer }}
+			{{> education }}
+			{{> awards}}
+			{{> publications }}
+			{{> skills }}
+			{{> languages }}
+			{{> interests}}
+			{{> references}}
+			{{/with}}
+		</div>
+	</body>
+</html>

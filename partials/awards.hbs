@@ -1,0 +1,22 @@
+{{#if awards}}
+{{#>section title="Awards"}}
+	{{#each awards}}
+	<div class="mb-5">
+		<div class="columns is-vcentered is-gapless m-0">
+			<h5 class="column mb-3">
+				<span>{{this.title}}</span> ─
+				<span class="is-italic">{{this.awarder}}</span>
+			</h5>
+			<h6 class="column is-narrow mb-3">
+				{{this.date}}
+			</h6>
+		</div>
+		{{#if this.summary}}
+		<p>
+			{{this.summary}}
+		</p>
+		{{/if}}
+	</div>
+	{{/each}}
+{{/section}}
+{{/if}}

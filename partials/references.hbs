@@ -1,0 +1,11 @@
+{{#if references}}
+{{#>section title="References"}}
+	{{#each references}}
+	<blockquote class="mb-5">
+		{{this.reference}}
+		<br />
+		─ {{this.name}}
+	</blockquote>
+	{{/each}}
+{{/section}}
+{{/if}}

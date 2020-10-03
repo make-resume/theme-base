@@ -1,0 +1,35 @@
+{{#>section title="Contact"}}
+	<div class="columns is-multiline is-gapless">
+
+		{{#if website}}
+		<div class="column is-4 mb-1">
+			<span>Website</span> -
+			<a href="{{website}}" target="_blank">{{website}}</a>
+		</div>
+		{{/if}}
+
+		{{#if email}}
+		<div class="column is-4 mb-1">
+			<span>Email</span> -
+			<a href="mailto:{{email}}">{{email}}</a>
+		</div>
+		{{/if}}
+
+		{{#if phone}}
+		<div class="column is-4 mb-1">
+			<span>Phone</span> -
+			<span>{{phone}}</span>
+		</div>
+		{{/if}}
+
+		{{#if profiles}}
+		{{#each profiles}}
+		<div class="column is-4 mb-1">
+			<span>{{this.network}}</span> -
+			<a href="{{this.url}}" target="_blank">{{this.url}}</a>
+		</div>
+		{{/each}}
+		{{/if}}
+
+	</div>
+{{/section}}

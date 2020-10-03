@@ -1,0 +1,29 @@
+{{#if education}}
+{{#>section title="Education"}}
+	{{#each education}}
+	<div class="mb-5">
+		<div class="columns is-vcentered is-gapless m-0">
+			<h5 class="column mb-3">
+				<span>
+				{{this.studyType}}
+				{{#if this.area}}
+				<span class="is-italic">({{this.area}})</span>
+				{{/if}}
+				</span> ─
+				<span class="is-italic">{{this.institution}}</span>
+			</h5>
+			<h6 class="column is-narrow mb-3">
+				{{this.startDate}} ─ {{this.endDate}}
+			</h6>
+		</div>
+		{{#if this.courses}}
+		<ul>
+			{{#each this.courses}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+		{{/if}}
+	</div>
+	{{/each}}
+{{/section}}
+{{/if}}

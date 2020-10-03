@@ -1,0 +1,19 @@
+{{#if skills}}
+{{#>section title="Skills"}}
+	<div class="columns is-multiline is-gapless m-0">
+		{{#each skills}}
+		<div class="column is-4 mb-4">
+			<h5 class="m-0">{{this.name}}</h5>
+			<p class="is-italic has-text-grey">{{this.level}}</p>
+			{{#if this.keywords}}
+			<ul>
+				{{#each this.keywords}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+{{/section}}
+{{/if}}

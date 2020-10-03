@@ -1,0 +1,28 @@
+{{#if work}}
+{{#>section title="Work"}}
+	{{#each work}}
+	<div class="mb-5">
+		<div class="columns is-vcentered is-gapless m-0">
+			<h5 class="column mb-3">
+				<span>{{this.position}}</span> ─ <span class="is-italic">{{this.company}}</span>
+			</h5>
+			<h6 class="column is-narrow mb-3">
+				{{this.startDate}} ─ {{this.endDate}}
+			</h6>
+		</div>
+		{{#if this.summary}}
+		<p>
+			{{this.summary}}
+		</p>
+		{{/if}}
+		{{#if this.highlights}}
+		<ul>
+			{{#each this.highlights}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+		{{/if}}
+	</div>
+	{{/each}}
+{{/section}}
+{{/if}}
