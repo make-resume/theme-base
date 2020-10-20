@@ -8,34 +8,27 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
 		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
 		<link rel="stylesheet" href="./assets/index.css" />
 	</head>
 	<body>
 		{{#with resume.basics}}
-		<header class="hero is-info mb-6">
-			<div class="hero-body">
-				<div class="c-container">
-					<h1 class="title is-1">{{name}}</h1>
-					<h3 class="subtitle is-italic">{{label}}</h3>
-				</div>
-			</div>
-		</header>
+		{{> header}}
 		{{/with}}
 
 		<div class="c-container content">
 			{{#with resume.basics}}
-			{{> contact}}
 			{{> summary}}
 			{{/with}}
 
 			{{#with resume}}
-			{{> work }}
-			{{> volunteer }}
-			{{> education }}
+			{{> work}}
+			{{> volunteer}}
+			{{> education}}
 			{{> awards}}
-			{{> publications }}
-			{{> skills }}
-			{{> languages }}
+			{{> publications}}
+			{{> skills}}
+			{{> languages}}
 			{{> interests}}
 			{{> references}}
 			{{/with}}

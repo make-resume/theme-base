@@ -1,0 +1,60 @@
+<header class="hero is-info mb-6">
+	<div class="hero-body">
+		<div class="c-container">
+			<div class="columns is-multiline is-gapless is-justify-content-space-between is-align-items-center">
+				<div class="column is-narrow mb-sm-4">
+					<h1 class="title is-1">{{name}}</h1>
+					<h3 class="subtitle is-italic">{{label}}</h3>
+				</div>
+				<div class="column is-narrow mb-sm-4">
+					{{#if website}}
+					<div>
+						<a href="{{website}}" target="_blank" class="has-text-white">
+							<span class="icon"><i class="fas fa-link"></i></span>
+							{{website}}
+						</a>
+					</div>
+					{{/if}}
+					{{#if email}}
+					<div>
+						<a href="mailto:{{email}}" class="has-text-white">
+							<span class="icon"><i class="far fa-envelope"></i></span>
+							{{email}}
+						</a>
+					</div>
+					{{/if}}
+					{{#if phone}}
+					<div>
+						<a href="tel:{{phone}}" class="has-text-white">
+							<span class="icon"><i class="fas fa-phone"></i></span>
+							{{phone}}
+						</a>
+					</div>
+					{{/if}}
+					{{#if profiles}}
+					<div class="mt-2">
+					{{#each profiles}}
+						{{#eq (lowercase this.network) "twitter"}}
+						<div >
+							<a href="{{this.url}}" target="_blank" class="has-text-white">
+								<span class="icon"><i class="fab fa-twitter"></i></span>
+								{{this.username}}
+							</a>
+						</div>
+						{{/eq}}
+						{{#eq (lowercase this.network) "instagram"}}
+						<div>
+							<a href="{{this.url}}" target="_blank" class="has-text-white">
+								<span class="icon"><i class="fab fa-instagram"></i></span>
+								{{this.username}}
+							</a>
+						</div>
+						{{/eq}}
+					{{/each}}
+					</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
