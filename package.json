@@ -1,6 +1,6 @@
 {
 	"name": "make-resume-theme-base",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Make Resume built-in and default theme.",
 	"main": "index.js",
 	"scripts": {
