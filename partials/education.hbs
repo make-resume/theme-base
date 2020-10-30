@@ -16,6 +16,11 @@
 				{{this.startDate}} ─ {{this.endDate}}
 			</h6>
 		</div>
+		{{#if this.gpa}}
+		<div>
+			<strong>Score:</strong> <i>{{this.gpa}}</i>
+		</div>
+		{{/if}}
 		{{#if this.courses}}
 		<ul>
 			{{#each this.courses}}
