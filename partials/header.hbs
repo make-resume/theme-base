@@ -50,6 +50,14 @@
 							</a>
 						</div>
 						{{/eq}}
+						{{#eq (lowercase this.network) "github"}}
+						<div>
+							<a href="{{this.url}}" target="_blank" class="has-text-white">
+								<span class="icon"><i class="fab fa-github"></i></span>
+								{{this.username}}
+							</a>
+						</div>
+						{{/eq}}
 					{{/each}}
 					</div>
 					{{/if}}
