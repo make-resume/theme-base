@@ -13,6 +13,10 @@
 		{{#if this.summary}}
 		<p>
 			{{this.summary}}
+			{{#if this.website}}
+			<br />
+			<a href="{{this.website}}" target="_blank">{{this.website}}</a>
+			{{/if}}
 		</p>
 		{{/if}}
 		{{#if this.highlights}}
