@@ -1,12 +1,12 @@
 <header class="hero is-info mb-6">
 	<div class="hero-body">
 		<div class="c-container">
-			<div class="columns is-multiline is-gapless is-justify-content-space-between is-align-items-center">
-				<div class="column is-narrow mb-sm-4">
-					<h1 class="title is-1 has-text-weight-bold">{{name}}</h1>
-					<h3 class="subtitle is-italic">{{label}}</h3>
-				</div>
-				<div class="column is-narrow mb-sm-4">
+			<div class="has-text-centered mb-6">
+				<h1 class="title is-1 has-text-weight-bold">{{name}}</h1>
+				<h3 class="subtitle is-italic">{{label}}</h3>
+			</div>
+			<div class="columns is-justify-content-space-around">
+				<div class="column is-narrow">
 					{{#if website}}
 					<div>
 						<a href="{{website}}" target="_blank" class="has-text-white">
@@ -31,37 +31,51 @@
 						</a>
 					</div>
 					{{/if}}
-					{{#if profiles}}
-					<div class="mt-2">
-					{{#each profiles}}
-						{{#eq (lowercase this.network) "twitter"}}
-						<div >
-							<a href="{{this.url}}" target="_blank" class="has-text-white">
-								<span class="icon"><i class="fab fa-twitter"></i></span>
-								{{this.username}}
-							</a>
-						</div>
-						{{/eq}}
-						{{#eq (lowercase this.network) "instagram"}}
-						<div>
-							<a href="{{this.url}}" target="_blank" class="has-text-white">
-								<span class="icon"><i class="fab fa-instagram"></i></span>
-								{{this.username}}
-							</a>
-						</div>
-						{{/eq}}
-						{{#eq (lowercase this.network) "github"}}
-						<div>
-							<a href="{{this.url}}" target="_blank" class="has-text-white">
-								<span class="icon"><i class="fab fa-github"></i></span>
-								{{this.username}}
-							</a>
-						</div>
-						{{/eq}}
-					{{/each}}
-					</div>
-					{{/if}}
 				</div>
+				{{#if profiles}}
+				<div class="column is-narrow">
+					{{#each profiles}}
+					{{#eq (lowercase this.network) "twitter"}}
+					<div>
+						<a href="{{this.url}}" target="_blank" class="has-text-white">
+							<span class="icon"><i class="fab fa-twitter"></i></span>
+							{{this.username}}
+						</a>
+					</div>
+					{{/eq}}
+					{{#eq (lowercase this.network) "instagram"}}
+					<div>
+						<a href="{{this.url}}" target="_blank" class="has-text-white">
+							<span class="icon"><i class="fab fa-instagram"></i></span>
+							{{this.username}}
+						</a>
+					</div>
+					{{/eq}}
+					{{#eq (lowercase this.network) "github"}}
+					<div>
+						<a href="{{this.url}}" target="_blank" class="has-text-white">
+							<span class="icon"><i class="fab fa-github"></i></span>
+							{{this.username}}
+						</a>
+					</div>
+					{{/eq}}
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if location}}
+				<div class="column is-narrow">
+					{{#or location.address location.city}}
+					<p>
+						{{location.address}} {{location.city}}
+					</p>
+					{{/or}}
+					{{#or location.postalCode location.region location.countryCode}}
+					<p>
+						{{location.postalCode}} {{location.region}} {{location.countryCode}}
+					</p>
+					{{/or}}
+				</div>
+				{{/if}}
 			</div>
 		</div>
 	</div>
