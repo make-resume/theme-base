@@ -6,6 +6,9 @@ body {
 	max-width: 90%;
 	margin: 0 auto;
 }
+.m-auto {
+	margin: auto;
+}
 .mb-sm-4 {
 	margin-bottom: 1rem !important;
 }

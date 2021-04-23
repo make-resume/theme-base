@@ -2,7 +2,12 @@
 	<div class="hero-body">
 		<div class="c-container">
 			<div class="has-text-centered mb-6">
-				<h1 class="title is-1 has-text-weight-bold">{{name}}</h1>
+				{{#if picture}}
+				<figure class="image is-128x128 m-auto mb-4">
+					<img class="is-rounded" src="{{picture}}" />
+				</figure>
+				{{/if}}
+				<h1 class="title has-text-weight-bold">{{name}}</h1>
 				<h3 class="subtitle is-italic">{{label}}</h3>
 			</div>
 			<div class="columns is-justify-content-space-around">
