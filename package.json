@@ -1,6 +1,6 @@
 {
 	"name": "make-resume-theme-base",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "Base is a built-in and the default theme for Make Resume.",
 	"main": "index.js",
 	"scripts": {
