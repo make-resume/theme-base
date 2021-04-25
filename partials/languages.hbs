@@ -1,7 +1,7 @@
-{{#if languages}}
-{{#>section title="Languages"}}
+{{#if resume.languages}}
+{{#>section title=(sectionTitle resume "languages" "Languages")}}
 	<div class="columns is-multiline is-gapless m-0">
-		{{#each languages}}
+		{{#each resume.languages}}
 		<div class="column is-3 mb-4">
 			<h5 class="m-0">{{this.language}}</h5>
 			<p class="is-italic has-text-grey">{{this.fluency}}</p>

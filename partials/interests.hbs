@@ -1,7 +1,7 @@
-{{#if interests}}
-{{#>section title="Interests"}}
+{{#if resume.interests}}
+{{#>section title=(sectionTitle resume "interests" "Interests")}}
 	<div class="columns is-multiline is-gapless m-0">
-		{{#each interests}}
+		{{#each resume.interests}}
 		<div class="column is-3 mb-4">
 			<h5 class="m-0">{{this.name}}</h5>
 			{{#if this.keywords}}

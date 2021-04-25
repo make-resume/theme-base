@@ -1,7 +1,7 @@
-{{#if skills}}
-{{#>section title="Skills"}}
+{{#if resume.skills}}
+{{#>section title=(sectionTitle resume "skills" "Skills")}}
 	<div class="columns is-multiline is-gapless m-0">
-		{{#each skills}}
+		{{#each resume.skills}}
 		<div class="column is-4 mb-4">
 			<h5 class="m-0">{{this.name}}</h5>
 			<p class="is-italic has-text-grey">{{this.level}}</p>

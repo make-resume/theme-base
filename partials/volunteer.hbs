@@ -1,6 +1,6 @@
-{{#if volunteer}}
-{{#>section title="Volunteer"}}
-	{{#each volunteer}}
+{{#if resume.volunteer}}
+{{#>section title=(sectionTitle resume "volunteer" "Volunteer")}}
+	{{#each resume.volunteer}}
 	<div class="mb-5">
 		<div class="columns is-vcentered is-gapless m-0">
 			<h5 class="column mb-3">
