@@ -1,24 +1,24 @@
 {{#if resume.education}}
 {{#>section title=(sectionTitle resume "education" "Education")}}
 	{{#each resume.education}}
-	<div class="mb-5">
+	<div class="mb-4">
 		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
+			<h5 class="column">
 				<span>
 				{{this.studyType}}
 				{{#if this.area}}
-				<span class="is-italic">({{this.area}})</span>
+				<span>({{this.area}})</span>
 				{{/if}}
 				</span> ─
 				<span class="is-italic">{{this.institution}}</span>
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h6 class="column is-narrow">
 				{{this.startDate}} ─ {{this.endDate}}
 			</h6>
 		</div>
 		{{#if this.gpa}}
 		<div>
-			<strong>Score:</strong> <i>{{this.gpa}}</i>
+			<strong>{{this.gpa}}</strong>
 		</div>
 		{{/if}}
 		{{#if this.courses}}

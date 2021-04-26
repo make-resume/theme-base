@@ -1,5 +1,5 @@
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Merriweather", serif;
 }
 .c-container {
 	width: 800px;
@@ -12,8 +12,41 @@ body {
 .mb-sm-4 {
 	margin-bottom: 1rem !important;
 }
+.section-title {
+	position: relative;
+	display: inline-block;
+}
+.section-title::before {
+	content: "";
+	position: absolute;
+	background: lightgray;
+	width: 20px;
+	height: 3px;
+	left: -30px;
+	top: 50%;
+}
+.items {
+	list-style: none !important;
+	display: flex;
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-left: 1rem !important;
+}
+.items li {
+	padding: 0.2rem 0.4rem;
+	margin: 0 !important;
+	margin-right: 0.4rem !important;
+	font-weight: 600;
+	background: lightgray;
+}
 @media screen and (min-width: 769px), print {
 	.mb-sm-4 {
 		margin-bottom: 0 !important;
+	}
+}
+
+@media print {
+	.c-container {
+		width: 100%;
 	}
 }

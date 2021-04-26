@@ -1,12 +1,12 @@
 {{#if resume.work}}
 {{#>section title=(sectionTitle resume "work" "Work")}}
 	{{#each resume.work}}
-	<div class="mb-5">
+	<div class="mb-4">
 		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
+			<h5 class="column">
 				<span>{{this.position}}</span> ─ <span class="is-italic">{{this.company}}</span>
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h6 class="column is-narrow">
 				{{this.startDate}} ─ {{this.endDate}}
 			</h6>
 		</div>

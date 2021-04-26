@@ -1,19 +1,21 @@
 {{#if resume.skills}}
 {{#>section title=(sectionTitle resume "skills" "Skills")}}
-	<div class="columns is-multiline is-gapless m-0">
-		{{#each resume.skills}}
-		<div class="column is-4 mb-4">
+	{{#each resume.skills}}
+	<div class="columns is-multiline is-gapless mb-2">
+		<div class="column is-4">
 			<h5 class="m-0">{{this.name}}</h5>
 			<p class="is-italic has-text-grey">{{this.level}}</p>
-			{{#if this.keywords}}
-			<ul>
+		</div>
+		{{#if this.keywords}}
+		<div class="column is-8">
+			<ul class="items">
 				{{#each this.keywords}}
 				<li>{{this}}</li>
 				{{/each}}
 			</ul>
-			{{/if}}
 		</div>
-		{{/each}}
+		{{/if}}
 	</div>
+	{{/each}}
 {{/section}}
 {{/if}}

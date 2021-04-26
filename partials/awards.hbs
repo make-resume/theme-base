@@ -1,13 +1,13 @@
 {{#if resume.awards}}
 {{#>section title=(sectionTitle resume "awards" "Awards")}}
 	{{#each resume.awards}}
-	<div class="mb-5">
+	<div class="mb-4">
 		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
+			<h5 class="column">
 				<span>{{this.title}}</span> ─
 				<span class="is-italic">{{this.awarder}}</span>
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h6 class="column is-narrow">
 				{{this.date}}
 			</h6>
 		</div>

@@ -1,18 +1,20 @@
 {{#if resume.interests}}
 {{#>section title=(sectionTitle resume "interests" "Interests")}}
-	<div class="columns is-multiline is-gapless m-0">
-		{{#each resume.interests}}
-		<div class="column is-3 mb-4">
+	{{#each resume.interests}}
+	<div class="columns is-multiline is-gapless mb-2">
+		<div class="column is-4">
 			<h5 class="m-0">{{this.name}}</h5>
-			{{#if this.keywords}}
-			<ul>
+		</div>
+		{{#if this.keywords}}
+		<div class="column is-8">
+			<ul class="items">
 				{{#each this.keywords}}
 				<li>{{this}}</li>
 				{{/each}}
 			</ul>
-			{{/if}}
 		</div>
-		{{/each}}
+		{{/if}}
 	</div>
+	{{/each}}
 {{/section}}
 {{/if}}
