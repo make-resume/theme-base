@@ -1,4 +1,4 @@
-<header class="hero is-info mb-6">
+<header class="hero is-info mb-5">
 	<div class="hero-body">
 		<div class="c-container">
 			<div class="has-text-centered mb-6">
@@ -13,72 +13,74 @@
 			<div class="columns is-justify-content-space-around">
 				<div class="column is-narrow">
 					{{#if website}}
-					<div>
-						<a href="{{website}}" target="_blank" class="has-text-white">
-							<span class="icon"><i class="fas fa-link"></i></span>
-							{{website}}
-						</a>
-					</div>
+                    {{#>contact title=website link=website icon="fas fa-link"}}{{/contact}}
 					{{/if}}
 					{{#if email}}
-					<div>
-						<a href="mailto:{{email}}" class="has-text-white">
-							<span class="icon"><i class="far fa-envelope"></i></span>
-							{{email}}
-						</a>
-					</div>
+                    {{#>contact title=email link=(prepend email "mailto:") icon="far fa-envelope"}}{{/contact}}
 					{{/if}}
 					{{#if phone}}
-					<div>
-						<a href="tel:{{phone}}" class="has-text-white">
-							<span class="icon"><i class="fas fa-phone"></i></span>
-							{{phone}}
-						</a>
-					</div>
+                    {{#>contact title=phone link=(prepend phone "tel:") icon="fas fa-phone"}}{{/contact}}
 					{{/if}}
 				</div>
 				{{#if profiles}}
 				<div class="column is-narrow">
-					{{#each profiles}}
-					{{#eq (lowercase this.network) "twitter"}}
-					<div>
-						<a href="{{this.url}}" target="_blank" class="has-text-white">
-							<span class="icon"><i class="fab fa-twitter"></i></span>
-							{{this.username}}
-						</a>
-					</div>
-					{{/eq}}
-					{{#eq (lowercase this.network) "instagram"}}
-					<div>
-						<a href="{{this.url}}" target="_blank" class="has-text-white">
-							<span class="icon"><i class="fab fa-instagram"></i></span>
-							{{this.username}}
-						</a>
-					</div>
-					{{/eq}}
-					{{#eq (lowercase this.network) "github"}}
-					<div>
-						<a href="{{this.url}}" target="_blank" class="has-text-white">
-							<span class="icon"><i class="fab fa-github"></i></span>
-							{{this.username}}
-						</a>
-					</div>
-					{{/eq}}
-					{{/each}}
+				{{#each profiles}}
+				{{#eq (lowercase this.network) "twitter"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-twitter"}}{{/contact}}
+				{{/eq}}
+				{{#eq (lowercase this.network) "instagram"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-instagram"}}{{/contact}}
+				{{/eq}}
+				{{#eq (lowercase this.network) "github"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-github"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "facebook"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-facebook"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "linkedin"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-linkedin"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "skype"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-skype"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "youtube"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-youtube"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "behance"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-behance"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "pinterest"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-pinterest"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "discord"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-discord"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "telegram"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-telegram"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "reddit"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-reddit"}}{{/contact}}
+				{{/eq}}
+				{{/each}}
 				</div>
 				{{/if}}
-				{{#if location}}
+				{{#if location.city}}
 				<div class="column is-narrow">
-					{{#or location.address location.city}}
 					<p>
-						{{location.address}} {{location.city}}
-					</p>
-					{{/or}}
-					{{#or location.postalCode location.region location.countryCode}}
-					<p>
-						{{location.postalCode}} {{location.region}} {{location.countryCode}}
-					</p>
-					{{/or}}
+                    {{#if location.address}}
+                        {{location.address}}
+                    {{/if}}
+                    {{location.city}}
+                    {{#if location.postalCode}}
+                        {{location.postalCode}}
+                    {{/if}}
+                    {{#if location.region}}
+                        {{location.region}}
+                    {{/if}}
+                    {{#if location.countryCode}}
+                        {{location.countryCode}}
+                    {{/if}}
+                    </p>
 				</div>
 				{{/if}}
 			</div>
