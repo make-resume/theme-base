@@ -2,10 +2,13 @@ body {
 	font-family: "Merriweather", serif;
 }
 .c-container {
-	width: 800px;
-	max-width: 90%;
+	width: 842px;
 	margin: 0 auto;
 }
+.c-container__padded {
+	padding: 0 2rem 0 3.5rem;
+}
+
 .m-auto {
 	margin: auto;
 }
@@ -17,14 +20,40 @@ body {
 	display: inline-block;
 }
 .section-title::before {
-	content: "";
+	font-family: "Font Awesome 5 Free";
 	position: absolute;
-	background: lightgray;
-	width: 20px;
-	height: 3px;
-	left: -30px;
-	top: 50%;
+	left: -2rem;
 }
+.work-title::before {
+	content: "\f0b1";
+}
+.volunteer-title::before {
+	content: "\f4c4";
+	left: -2.3rem;
+}
+.education-title::before {
+	content: "\f19c";
+}
+.awards-title::before {
+	content: "\f559";
+	left: -1.8rem;
+}
+.interests-title::before {
+	content: "\f192";
+}
+.languages-title::before {
+	content: "\f0ac";
+}
+.references-title::before {
+	content: "\f069";
+}
+.skills-title::before {
+	content: "\f192";
+}
+.publications-title::before {
+	content: "\f249";
+}
+
 .items {
 	list-style: none !important;
 	display: flex;
