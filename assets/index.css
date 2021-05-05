@@ -1,6 +1,20 @@
 body {
-	font-family: "Merriweather", serif;
+	font-family: var(--font-family);
 }
+
+/* utils */
+.bg-primary {
+	background-color: var(--clr-primary);
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.mb-sm-4 {
+	margin-bottom: 1rem !important;
+}
+
 .c-container {
 	width: 842px;
 	margin: 0 auto;
@@ -9,13 +23,8 @@ body {
 	padding: 0 2rem 0 3.5rem;
 }
 
-.m-auto {
-	margin: auto;
-}
-.mb-sm-4 {
-	margin-bottom: 1rem !important;
-}
 .section-title {
+	color: var(--clr-primary) !important;
 	position: relative;
 	display: inline-block;
 }
@@ -24,6 +33,7 @@ body {
 	position: absolute;
 	left: -2rem;
 }
+
 .work-title::before {
 	content: "\f0b1";
 }
@@ -68,6 +78,7 @@ body {
 	font-weight: 600;
 	background: lightgray;
 }
+
 @media screen and (min-width: 769px), print {
 	.mb-sm-4 {
 		margin-bottom: 0 !important;

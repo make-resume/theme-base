@@ -1,0 +1,16 @@
+{
+	"vars": [
+		{
+			"key": "fontFamily",
+			"type": "font-family",
+			"title": "Font Family",
+			"defaultValue": "\"Merriweather\", serif"
+		},
+		{
+			"key": "primaryColor",
+			"type": "color",
+			"title": "Primary Color",
+			"defaultValue": "#209cee"
+		}
+	]
+}
